@@ -1,4 +1,4 @@
-class CatRobot extends Robot implements Robotable {
+class CatRobot extends Robot {
 
     public CatRobot(){}
 
@@ -11,12 +11,7 @@ class CatRobot extends Robot implements Robotable {
 
     public void showInfo(){
         System.out.println("Cat Robot");
-        System.out.println(this.brand + ", " + this.price + ", " + this.name + ", " + this.id);
+        System.out.println(this.brand + ", " + this.price + ", " + this.name + ", " + this.id + "\n");
     }
     
-
-    public  void walk(){}
-    public  void turnLeft(){}
-    public  void turnRight(){}
-    public  void stop(){}
 }

@@ -1,4 +1,4 @@
-class DogRobot extends Robot implements Robotable {
+class DogRobot extends Robot {
 
     public DogRobot(){}
 
@@ -11,7 +11,7 @@ class DogRobot extends Robot implements Robotable {
 
     public void showInfo(){
         System.out.println("Dog Robot");
-        System.out.println(this.brand + ", " + this.price + ", " + this.name + ", " + this.id);
+        System.out.println(this.brand + ", " + this.price + ", " + this.name + ", " + this.id + "\n");
     }
 
 

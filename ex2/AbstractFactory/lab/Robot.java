@@ -1,4 +1,4 @@
-abstract class Robot implements Robotable {
+abstract class Robot implements Robotable{
 
     protected String brand, name, id;
     protected double price;
