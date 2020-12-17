@@ -1,11 +1,12 @@
 class Driver {
     public static void main(String[] args) {
 
-        Robot dogRobot = RobotFactory.createRobot(Robot.DogRobot_type);
-        dogRobot.showInfo();
+        Robot cleaningRobot = RobotFactory.createRobot(Robot.cleaningType);
+        cleaningRobot.showInfo();
 
-        Robot catRobot = RobotFactory.createRobot(Robot.CatRobot_type);
-        catRobot.showInfo();
+        Robot serviceRobot = RobotFactory.createRobot(Robot.serviceType);
+        serviceRobot.showInfo();
+
         
     }
 }

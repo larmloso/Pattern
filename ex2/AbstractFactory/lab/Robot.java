@@ -1,12 +1,15 @@
-abstract class Robot implements Robotable{
+public interface Robot {
 
-    protected String brand, name, id;
-    protected double price;
+    public static final String cleaningType = "cleaningType";
+    public static final String serviceType = "serviceType";
 
-    public void showInfo(){}
-    public void walk(){}
-    public void turnLeft(){}
-    public void turnRight(){}
-    public void stop(){}
+    public abstract void showInfo();
+    public abstract void onlineCtrl();
+    public abstract void automaticWork();
+
+    public abstract void walk();
+    public abstract void turnLeft();
+    public abstract void turnRight();
+    public abstract void stop();
 
 }

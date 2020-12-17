@@ -1,10 +1,11 @@
 class Driver {
     public static void main(String[] args) {
-        Robot dogrobot = new Robot.RobotBuilder("dogName", "dogBrand", 1800.00).setBLsing(true).build();
-        dogrobot.showInfo();
 
-        Robot catrobot = new Robot.RobotBuilder("CatName", "catBrand", 2000).build();
-        catrobot.showInfo();
+        Robot cleaningRobot = new Robot.RobotBuilder("cleaning robot", "cln-001", 2).setAutomaticWork(true).build();
+        cleaningRobot.showInfo();
+
+        Robot serviceRobot = new Robot.RobotBuilder("cleaning robot", "cln-001").setAutomaticWork(true).setTalk(true).build();
+        serviceRobot.showInfo();
     }
 }
 

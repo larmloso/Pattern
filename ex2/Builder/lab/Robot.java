@@ -1,49 +1,58 @@
 public class Robot {
 
-    private String name, brand;
-    private double price;
-    private boolean BLsing = false;
+    private String name, id;
+    private int level;
+    private boolean isAutomaticWork = false;
+    private boolean isTalk = false;
 
     private Robot(RobotBuilder builder){
         this.name = builder.name;
-        this.brand = builder.brand;
-        this.price = builder.price;
-        this.BLsing = builder.BLsing;
+        this.id = builder.id;
+        this.isAutomaticWork = builder.isAutomaticWork;
+        this.isTalk = builder.isTalk;
+        this.level = builder.level;
     }
 
     public String getName(){
         return name;
     }
-    public String getBrand(){
-        return brand;
+    public String getId(){
+        return id;
     }
-    public double getPrice(){
-        return price;
-    }
-    public boolean getSing(){
-        return BLsing;
+    public int getLevel(){
+        return level;
     }
 
 
     public void showInfo(){
-        System.out.println(this.name + ", " + this.brand + ", " + this.price );
-        System.out.println("Robot can sing : " + this.BLsing + "\n");
+        System.out.println("NAME :"+ name + "\nID : " + id + "\nAutomatic Work : "+ isAutomaticWork);
+        System.out.println("Automatic Talk : " + isTalk + "\n" + "Level : " + level + "\n");
     }
 
 
     public static class RobotBuilder {
-        private String name, brand;
-        private double price;
-        private boolean BLsing = false;
+        private String name,id;
+        private int level;
+        private boolean isAutomaticWork = false;
+        private boolean isTalk = false;
 
-        public RobotBuilder(String name, String brand, double price){
+        public RobotBuilder(String name, String id){
             this.name = name;
-            this.brand = brand;
-            this.price = price;
+            this.id = id;
+        }
+        public RobotBuilder(String name, String id, int level){
+            this.name = name;
+            this.id = id;
+            this.level = level;
         }
 
-        public RobotBuilder setBLsing(boolean blsing){
-            this.BLsing = blsing;
+        public RobotBuilder setAutomaticWork(boolean isAutomaticWork){
+            this.isAutomaticWork = isAutomaticWork;
+            return this;
+        }
+
+        public RobotBuilder setTalk(boolean isTalk){
+            this.isTalk = isTalk;
             return this;
         }
 
