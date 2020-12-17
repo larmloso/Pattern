@@ -1,6 +1,6 @@
 
 import java.io.Serializable;
-class CleaningRobot implements Serializable {
+class CleaningRobot implements Serializable, Cleaningable, Robot {
 
     private String name, id;
     private int level;
@@ -11,6 +11,13 @@ class CleaningRobot implements Serializable {
         this.name = name;
         this.level = level;
         this.isAutoWork = isAutoWork;
+    }
+
+    public void sweep(){
+        System.out.println("The robot is sweeping the floor.");
+    }
+    public void mopping(){
+        System.out.println("The robot is mopping the floor.");
     }
 
     public void setName(String name) {
@@ -28,5 +35,13 @@ class CleaningRobot implements Serializable {
 
     public String toString() {
         return "NAME : " + name + " Level : " + level + " Automatic Work : " + isAutoWork;
+    }
+
+    public void showInfo(){
+        System.out.println("Name" + name + "Id" + id);
+    }
+
+    public void onlineCtrl(){
+        ////
     }
 }

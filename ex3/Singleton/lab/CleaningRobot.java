@@ -1,4 +1,4 @@
-class CleaningRobot implements CleaningRobotable {
+class CleaningRobot implements Cleaningable, Robot {
 
     private String name, id;
     private int level;
@@ -23,6 +23,14 @@ class CleaningRobot implements CleaningRobotable {
 
     public void mopping(){
         System.out.println("The robot is mopping the floor");
+    }
+
+    public void showInfo(){
+        System.out.println("Name" + name + "Id" + id);
+    }
+
+    public void onlineCtrl(){
+        ////
     }
 
 

@@ -1,4 +1,4 @@
-class ServiceRobot implements Prototype {
+class ServiceRobot implements Prototype, Robot {
 
     private String name, id;
     private boolean isAutoWork, isAutoTalk;
@@ -15,7 +15,22 @@ class ServiceRobot implements Prototype {
     }
 
     public String toString() {
-        return "NAME : "+ name + " ID : " + id + "\nAutomatic Talking : " 
-                + isAutoTalk + " Automatic Work : "+ isAutoWork;
+        return "NAME : "+ name + ", ID : " + id + "\nAutomatic Talking : " 
+                + isAutoTalk + ", Automatic Work : "+ isAutoWork;
+    }
+
+    public void showInfo(){
+        System.out.println("Name" + name + "Id" + id);
+    }
+
+    public void onlineCtrl(){
+        ////
+    }
+
+    public void serveFood(){
+        System.out.println("Robots are serving food");
+    }
+    public void talking(){
+        System.out.println("The robot is talking");
     }
 }

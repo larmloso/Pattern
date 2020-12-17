@@ -1,4 +1,4 @@
-class ServiceRobot implements ServiceRobotable {
+class ServiceRobot implements Serviceable, Robot{
 
     private String name, id;
     private boolean isAutoWork, isAutoTalk;
@@ -19,8 +19,16 @@ class ServiceRobot implements ServiceRobotable {
         System.out.println("Robots are serving food");
     }
 
-    public void talk(){
+    public void talking(){
         System.out.println("The robot is talking");
+    }
+
+    public void showInfo(){
+        System.out.println("Name" + name + "Id" + id);
+    }
+
+    public void onlineCtrl(){
+        ////
     }
 
     

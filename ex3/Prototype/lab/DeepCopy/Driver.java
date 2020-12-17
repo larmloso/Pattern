@@ -17,11 +17,15 @@ public class Driver {
         cm.setNum(5);
         CleaningRobot cln = cm.getCleaningRobot();
         cln.setName("cleaning BBB");
+        cln.setIsAutoWork(false);
 
         System.out.println("\nAfter cloning");
         System.out.println("clone mgr :" + cm);
         System.out.println("shallowClone:" + shallowClone);
         System.out.println("deepClone:" + deepClone);
+
+
+
 
         // CloneMgr cm = new CloneMgr();
         // cm.setNum(4);

@@ -10,15 +10,15 @@ public class Driver {
         
         // test class CleaningRobot
         CleaningRobot.getInstance().sweep();
-        System.out.println(CleaningRobot.getInstance().hashCode());
+        System.out.println("CleaningRobot hasCode : " + CleaningRobot.getInstance().hashCode());
         CleaningRobot.getInstance().mopping();
-        System.out.println(CleaningRobot.getInstance().hashCode() + "\n");
+        System.out.println("CleaningRobot hasCode : " + CleaningRobot.getInstance().hashCode() + "\n");
 
         // test class ServiceRobot
 
         ServiceRobot.getInstance().serveFood();
-        System.out.println(ServiceRobot.getInstance().hashCode());
-        ServiceRobot.getInstance().talk();
-        System.out.println(ServiceRobot.getInstance().hashCode());
+        System.out.println("ServiceRobot hasCode : " + ServiceRobot.getInstance().hashCode());
+        ServiceRobot.getInstance().talking();
+        System.out.println("ServiceRobot hasCode : " + ServiceRobot.getInstance().hashCode());
     }
 }

@@ -1,4 +1,4 @@
-class CleaningRobot implements Prototype {
+class CleaningRobot implements Prototype, Robot, Cleaningable {
 
     private String name, id;
     private int level;
@@ -16,9 +16,25 @@ class CleaningRobot implements Prototype {
     }
 
     public String toString() {
-        return "NAME : "+ name + " ID : " + id + "\nLevel : " 
-                + level + " Automatic Work : "+ isAutoWork;
+        return "NAME : "+ name + ", ID : " + id + "\nLevel : " 
+                + level + ", Automatic Work : "+ isAutoWork;
     }
+
+    public void showInfo(){
+        System.out.println("Name" + name + "Id" + id);
+    }
+
+    public void onlineCtrl(){
+        ////
+    }
+
+    public void sweep(){
+        System.out.println("The robot is sweeping the floor.");
+    }
+    public void mopping(){
+        System.out.println("The robot is mopping the floor.");
+    }
+
 
 
 }
