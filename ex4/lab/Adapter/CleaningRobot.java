@@ -8,10 +8,14 @@ class CleaningRobot extends AbstractRobot {
     setAutomaticWork(true);
   }
 
+  @Override
   public double getBattery(){
     final double hours = (batter_mAh * volts)/(watts * 1000);
     return hours * 60;
   }
+
+
+
 
   
   /// Method implements from interface class CleaningAble
