@@ -9,7 +9,7 @@ public class MyImage {
     }
 
     public void showInfo(int x, int y) {
-        System.out.println(name + " size : " + x  + "px X " + y + "px");
+        //System.out.println(name + " size : " + x  + "px X " + y + "px");
     }
 
 }

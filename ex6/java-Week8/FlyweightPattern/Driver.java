@@ -1,38 +1,40 @@
 
 import java.util.Random;
 public class Driver {
-    String[] imgName = { "aaa.png", "bbb.png", "ccc.png" };
+    String[] fileImgName = { "aaa.png", "bbb.png", "ccc.png"};
 
     public static void main(String[] args) {
         new Driver();
     }
 
     public Driver() {
-        int e = 0;
-        //while (e <= 10){
+
+        // int e = 0;
+        // while (e <= 10){
+
             long startTime = System.currentTimeMillis();
-            for (int i = 0; i < 100; ++i) {
-                MyImage rect = ImageFactory.getRect(getRandColor());
-                rect.showInfo(getRandX(), getRandY());
+            for (int i = 0; i < 200; ++i) {
+                MyImage image = ImageFactory.getImage(getRandImage());
+                image.showInfo(getWidth(), getHeight());
             }
             long endTime = System.currentTimeMillis();
             System.out.println("That took " + (endTime - startTime) + " milliseconds");
-            //++e;
-        //}
 
+        //     ++e;
+        // }
     }
 
-    private int getRandX() {
+    private int getWidth() {
         return (int) new Random().nextInt(10) + 2;
     }
 
-    private int getRandY() {
+    private int getHeight() {
         return (int) new Random().nextInt(10) + 2;
     }
 
-    private String getRandColor() {
+    private String getRandImage() {
         Random randomGenerator = new Random();
-        int randInt = randomGenerator.nextInt(2);
-        return imgName[randInt];
+        int randInt = randomGenerator.nextInt(3);
+        return fileImgName[randInt];
     }
 }
